@@ -1,8 +1,6 @@
 package com.mase.android;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,16 +14,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+
+        // 버튼 초기화를 onCreate 내부에 위치시키세요.
+        final Button button = (Button) findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "버튼이 눌렸습니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
-
-    final Button button = (Button) findViewById(R.id.button);
-
-    button.setOnClickListener(new View.OnClickListener() {
-        public void onClick(View v) {
-            Toast.makeText(getApplicationContext(), "버튼이 눌렸습니다.", Toast.LENGTH_SHORT).show();
-        }
-    });
-
 
     public void onClicked(View v) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:010-1234-5678"));
