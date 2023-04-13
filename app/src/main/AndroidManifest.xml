@@ -12,7 +12,7 @@
         android:theme="@style/Theme.MASEandroid"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivityCC1"
+            android:name=".MainActivity0413_2"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
